@@ -1,39 +1,23 @@
-import { useCallback, useEffect, useState } from 'react'
-import './assets/css/Form.css'
-import DataContainer from './DataContainer';
+import { useState } from 'react'
+import './assets/css/form.css'
 
-function Form(props) {
-  const {activateDataContainer} = props
+const Form = (props) => {
+  const [user, setUser] = useState('Ewerson-hub');
 
-  const [data, setData] = useState({})
+  const saveData = async () => {
+  setUser(document.getElementById('search').value)
 
-  useEffect(() => {
-    fetch('http://localhost:3000/Ewerson-hub').then(
+   await fetch(`http://localhost:3000/${user}`).then(
       response => response.json()
     ).then(user => {
-      
-      let x = JSON.parse(user);
-      
-      setData({
-        "name": x.name,
-        "avatar":x.avatar,
-        "bio": x.bio,
-        "github_link":x.github_link,
-        "repos": x.repos
-      })
-    })
-    
-  },[]);
-
-  console.log(Object.keys(data).length)
+       props.getDataUpdate(JSON.parse(user))
+    }) 
+  }
   return (
-    <>  
+    <div id='form-container'>  
         <input type="text" name="search" id="search"/>
         <button onClick={saveData}>Search</button>
-        <button onClick={clearData}>Clear</button>
-
-        {(Object.keys(data).length != 0)? <DataContainer setVisible={true} data={data}/> : <DataContainer setVisible={false} />}
-    </>
+    </div>
   )
 }
 

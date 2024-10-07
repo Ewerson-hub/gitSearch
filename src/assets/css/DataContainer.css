@@ -1,0 +1,42 @@
+#data-container{
+    max-width: 100vw;
+    font-size: 1.5rem;
+}
+a{
+    font-weight: 600;
+    color: #646cff;
+    text-decoration: inherit;
+}
+a:hover {
+    color: #535bf2;
+}
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+img{
+    max-width: 250px;
+}
+
+#projects{
+    max-width: 100vw;
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto ;
+    gap: 50px 50px;
+}
+#projects > h2 {
+    grid-column: span 3;              
+    text-align: center;   
+}
+#projects > div{
+    border-radius: 10px;
+    border: whitesmoke 1px solid;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 20px;
+
+    width: 500px;
+}

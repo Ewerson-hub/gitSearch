@@ -7,7 +7,7 @@ router.get("/:id",  (req, res, next) => {
     res.set('Access-Control-Allow-Origin','http://localhost:5173');
     res.set('Content-type', 'aplication/json')
     next();
-}, fakeData)
+}, getUser)
 
 export default router;
 

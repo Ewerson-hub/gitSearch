@@ -1,38 +1,21 @@
 import DataContainer from './DataContainer.jsx'
 import Form from './Form.jsx'
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 
-class MainRender extends React.Component{
-    constructor(props){
-      super(props);
-  
-      this.state = {
-        enableDataContainer: false,
-
-        dataApi: {
-          name:"",
-          avatar:"",
-          bio:"",
-          github_link:"",
-          repositories: ""
-        }
-      }
-      
-      this.activateDataContainer = this.activateDataContainer.bind(this)
-    }
-
-    activateDataContainer(){
-      this.setState({enableDataContainer: true})
-    }
+const MainRender = () => {
+    const [data, setData] = useState(null);
     
-    render(){
-      return (
-        <>
-          <Form activateDataContainer={this.activateDataContainer}/>
-          {/* <DataContainer setVisible={this.state.enableDataContainer}/> */}
-        </>
-      )
+    const handleDataUpdate = (newData) => {
+      setData(newData);
     }
-  }
+    // console.log((data)?data:'na')
+    return (
+      <>
+        <Form getDataUpdate={handleDataUpdate}/>
+        <DataContainer setVisible={(data === null)? false : true} data={data}/>
+      </>
+    )
+    
+}
 
 export default MainRender

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom/client'
 import ReciveData from './ReciveData'
-import './assets/css/index.css'
+import './assets/css/main.css'
 
 
 
