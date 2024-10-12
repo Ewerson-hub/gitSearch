@@ -4,15 +4,19 @@ import React, { Component, useState } from 'react'
 
 const MainRender = () => {
     const [data, setData] = useState(null);
+    const [awaitDataLoading, setAwaitDataLoading] = useState(true);
     
     const handleDataUpdate = (newData) => {
       setData(newData);
     }
-    // console.log((data)?data:'na')
+    
+    const handleUpdateAwaitDataLoading = (boolean) => {
+      setAwaitDataLoading(boolean)
+    }
     return (
       <>
-        <Form getDataUpdate={handleDataUpdate}/>
-        <DataContainer setVisible={(data === null)? false : true} data={data}/>
+        <Form getDataUpdate={handleDataUpdate} updateAwaitDataLoading = {handleUpdateAwaitDataLoading}/>
+        <DataContainer setVisible={(data === null)? false : true} data={data} awaitDataLoading={awaitDataLoading}/>
       </>
     )
     

@@ -4,6 +4,14 @@ const DataContainer = (props) => {
 
     if(!props.setVisible) return <></>
 
+    if(props.awaitDataLoading){
+        return (
+            <div  id='loading-div-container'>
+                <h1>Loading ...</h1>
+            </div>
+        )
+      }
+
 
     return(
         <div id='data-container'>
