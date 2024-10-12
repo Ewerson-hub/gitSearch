@@ -5,7 +5,7 @@ const api = new Octokit({
 })
 
 
-export async function getUserInfo(user="Ewerson-hub"){
+export async function getUserInfo(user){
     return await api.request('GET /users/{username}', {
         username: user
     })

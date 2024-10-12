@@ -37,47 +37,4 @@ const getRepos = async (user) => {
     )
     return repos
 }
-export const fakeData = (req, res) => {
-    const data = {
-        "name": 'Ewerson Lucas',
-        "avatar": 'https://avatars.githubusercontent.com/u/79768454?v=4',
-        "bio": 'Desenvolvedor Javascript | Node.js',
-        "github_link": 'https://github.com/Ewerson-hub',
-        "repos": [
-            {
-              "name": "CRUD-Employee",
-              "description": "N/A",
-              "url": "https://github.com/Ewerson-hub/CRUD-Employee"
-            },
-            {
-              "name": "Desafio-Target-Sistemas",
-              "description": "N/A",
-              "url": "https://github.com/Ewerson-hub/Desafio-Target-Sistemas"
-            },
-            {
-              "name": "Ewerson-hub.github.io",
-              "description": "N/A",
-              "url": "https://github.com/Ewerson-hub/Ewerson-hub.github.io"
-            },
-            {
-              "name": "FreeCodeCamp",
-              "description": "Minhas resoluções e projetos realizados nos cursos do Free Code Camp",
-              "url": "https://github.com/Ewerson-hub/FreeCodeCamp"
-            },
-            {
-              "name": "Projeto-Imobiliaria",
-              "description": "N/A",
-              "url": "https://github.com/Ewerson-hub/Projeto-Imobiliaria"
-            },
-            {
-              "name": "TaskMananger",
-              "description": "N/A",
-              "url": "https://github.com/Ewerson-hub/TaskMananger"
-            }
-          ]
-            
-    }
-    return res.status(200).json(JSON.stringify(data))
-}
-
 
