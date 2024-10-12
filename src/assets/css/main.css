@@ -29,5 +29,8 @@ body {
   justify-content: space-between;
 }
 
+#loading-div-container{
+  height: 80vh;
+}
 
 
