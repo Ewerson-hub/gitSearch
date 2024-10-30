@@ -1,4 +1,4 @@
-import { getUser, fakeData} from "./controller.js"
+import { getUser} from "./controller.js"
 import { Router } from "express"
 
 const router = Router();
