@@ -13,6 +13,7 @@ const MainRender = () => {
     const handleUpdateAwaitDataLoading = (boolean) => {
       setAwaitDataLoading(boolean)
     }
+    
     return (
       <>
         <Form getDataUpdate={handleDataUpdate} updateAwaitDataLoading = {handleUpdateAwaitDataLoading}/>
