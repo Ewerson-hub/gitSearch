@@ -1,2 +1,7 @@
-# Projeto Gir Search
-O projeto consiste na criação de um app que consome a api do github através de um parametro (nome de usuario do git) e serve ao front-end alguns dados publicos do usuario como nome, bio, foto de perfil e repositórios
+## Gir Search Project
+
+>The project consists of creating a Node.js application that consumes a Github API through a parameter (git username) and serves the front-end in React some public user data such as name, biography, profile photo and repositories .
+
+#### App Image 
+![](src/assets/imgs/Captura%20de%20tela.png)
+
