@@ -23,9 +23,13 @@ const Form = (props) => {
   }
 
   return (
-    <div id='form-container'>  
-        <input type="text" name="search" id="search" required/>
-        <button onClick={checkIfInputIsEmpty} type='button'>Search</button>
+    
+    <div id='form-container'> 
+        <h1>Git Search</h1>
+        <div>
+          <input type="text" name="search" id="search" required/>
+          <button onClick={checkIfInputIsEmpty} type='button'>Search</button>
+        </div>
     </div>
   )
 }
