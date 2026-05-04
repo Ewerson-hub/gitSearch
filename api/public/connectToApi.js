@@ -1,4 +1,4 @@
-import { Octokit, App } from "octokit";
+import { Octokit} from "octokit";
 
 const api = new Octokit({
     auth: process.env.MY_TOKEN
