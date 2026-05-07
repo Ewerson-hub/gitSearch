@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom/client'
-import ReciveData from './ReciveData'
-import './assets/css/main.css'
-
-
+import App from './App'
+import {Provider} from './components/ui/provider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ReciveData />
+    
+    <Provider> 
+      <App />
+    </Provider>
+    
   </React.StrictMode>,
 )
