@@ -11,20 +11,19 @@ export const getUser = async (req, res) => {
             "github_link": user.html_url,
             "repos": await getRepos(user)
         }
-        
-        return res.status(200).json(JSON.stringify(data))
+
+        return res.status(200).json(data)
     } catch (error) {
-        res.status(500).json({'error': error})
+        res.status(500).json({'Error': error.message})
     }   
 }
 
 const getRepos = async (user) => {
     const repos = []
-    await fetch(`${user.repos_url}`).then(
-        response => {
-            return response.json()
-        }
-    ).then(
+
+    await fetch(`${user.repos_url}`).then(response => {
+        return response.json()
+    }).then(
         data => {
             data.forEach(items => {
                 repos.push({
@@ -37,4 +36,3 @@ const getRepos = async (user) => {
     )
     return repos
 }
-
