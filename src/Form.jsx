@@ -23,7 +23,11 @@ const Form = (props) => {
     <Container spaceY="3" centerContent gap={"0.5"}>
       <Text textStyle="6xl" fontWeight="bold">Git Search</Text>
       <Group attached>
-        <Input w="xs" placeholder="Insert a github user name" onChange={(e) => handleSetInput(e.target.value)} />
+        <Input w="xs" placeholder="Insert a github user name" onChange={(e) => {
+          if(e.target.value !== ""){
+            handleSetInput(e.target.value)
+          }
+        }} required/>
         <IconButton>
           <LuSearch onClick={() => handleCallFetch(props)} />
         </IconButton>
